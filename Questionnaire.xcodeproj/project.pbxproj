@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C6D6F3E525C845E4005BC288 /* QuestionnaireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D6F3E425C845E4005BC288 /* QuestionnaireApp.swift */; };
+		C6D6F3E925C845E7005BC288 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6D6F3E825C845E7005BC288 /* Assets.xcassets */; };
+		C6D6F3EC25C845E7005BC288 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6D6F3EB25C845E7005BC288 /* Preview Assets.xcassets */; };
+		C6D6F3F725C848F4005BC288 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D6F3F625C848F4005BC288 /* QuestionView.swift */; };
+		C6D6F3FB25C84A67005BC288 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D6F3FA25C84A67005BC288 /* Question.swift */; };
+		C6D6F3FF25C84B98005BC288 /* QuestionnaireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D6F3FE25C84B98005BC288 /* QuestionnaireManager.swift */; };
+		C6D6F40225C8710E005BC288 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D6F40125C8710E005BC288 /* WelcomeView.swift */; };
+		C6D6F40725C8C49D005BC288 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D6F40625C8C49D005BC288 /* ResultsView.swift */; };
+		C6D6F41A25DA6B17005BC288 /* NavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D6F41925DA6B17005BC288 /* NavigationLink.swift */; };
+		C6D6F41E25DA841E005BC288 /* QuestionnaireBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D6F41D25DA841E005BC288 /* QuestionnaireBuilder.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C6D6F3E125C845E4005BC288 /* Questionnaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Questionnaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6D6F3E425C845E4005BC288 /* QuestionnaireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireApp.swift; sourceTree = "<group>"; };
+		C6D6F3E825C845E7005BC288 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C6D6F3EB25C845E7005BC288 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C6D6F3ED25C845E7005BC288 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6D6F3F625C848F4005BC288 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		C6D6F3FA25C84A67005BC288 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		C6D6F3FE25C84B98005BC288 /* QuestionnaireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireManager.swift; sourceTree = "<group>"; };
+		C6D6F40125C8710E005BC288 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		C6D6F40625C8C49D005BC288 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		C6D6F41925DA6B17005BC288 /* NavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLink.swift; sourceTree = "<group>"; };
+		C6D6F41D25DA841E005BC288 /* QuestionnaireBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireBuilder.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C6D6F3DE25C845E4005BC288 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C6D6F3D825C845E4005BC288 = {
+			isa = PBXGroup;
+			children = (
+				C6D6F3E325C845E4005BC288 /* Questionnaire */,
+				C6D6F3E225C845E4005BC288 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C6D6F3E225C845E4005BC288 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6D6F3E125C845E4005BC288 /* Questionnaire.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6D6F3E325C845E4005BC288 /* Questionnaire */ = {
+			isa = PBXGroup;
+			children = (
+				C6D6F3F925C84A58005BC288 /* Domain */,
+				C6D6F3F425C845F7005BC288 /* UI */,
+				C6D6F3E425C845E4005BC288 /* QuestionnaireApp.swift */,
+				C6D6F3E825C845E7005BC288 /* Assets.xcassets */,
+				C6D6F3ED25C845E7005BC288 /* Info.plist */,
+				C6D6F3EA25C845E7005BC288 /* Preview Content */,
+			);
+			path = Questionnaire;
+			sourceTree = "<group>";
+		};
+		C6D6F3EA25C845E7005BC288 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C6D6F3EB25C845E7005BC288 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C6D6F3F425C845F7005BC288 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C6D6F41825DA6AFF005BC288 /* Utils */,
+				C6D6F40125C8710E005BC288 /* WelcomeView.swift */,
+				C6D6F3F625C848F4005BC288 /* QuestionView.swift */,
+				C6D6F40625C8C49D005BC288 /* ResultsView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C6D6F3F925C84A58005BC288 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C6D6F3FA25C84A67005BC288 /* Question.swift */,
+				C6D6F3FE25C84B98005BC288 /* QuestionnaireManager.swift */,
+				C6D6F41D25DA841E005BC288 /* QuestionnaireBuilder.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C6D6F41825DA6AFF005BC288 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C6D6F41925DA6B17005BC288 /* NavigationLink.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C6D6F3E025C845E4005BC288 /* Questionnaire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6D6F3F025C845E7005BC288 /* Build configuration list for PBXNativeTarget "Questionnaire" */;
+			buildPhases = (
+				C6D6F3DD25C845E4005BC288 /* Sources */,
+				C6D6F3DE25C845E4005BC288 /* Frameworks */,
+				C6D6F3DF25C845E4005BC288 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Questionnaire;
+			productName = Questionnaire;
+			productReference = C6D6F3E125C845E4005BC288 /* Questionnaire.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C6D6F3D925C845E4005BC288 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					C6D6F3E025C845E4005BC288 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = C6D6F3DC25C845E4005BC288 /* Build configuration list for PBXProject "Questionnaire" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C6D6F3D825C845E4005BC288;
+			productRefGroup = C6D6F3E225C845E4005BC288 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6D6F3E025C845E4005BC288 /* Questionnaire */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C6D6F3DF25C845E4005BC288 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6D6F3EC25C845E7005BC288 /* Preview Assets.xcassets in Resources */,
+				C6D6F3E925C845E7005BC288 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C6D6F3DD25C845E4005BC288 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6D6F3FB25C84A67005BC288 /* Question.swift in Sources */,
+				C6D6F40725C8C49D005BC288 /* ResultsView.swift in Sources */,
+				C6D6F41A25DA6B17005BC288 /* NavigationLink.swift in Sources */,
+				C6D6F41E25DA841E005BC288 /* QuestionnaireBuilder.swift in Sources */,
+				C6D6F40225C8710E005BC288 /* WelcomeView.swift in Sources */,
+				C6D6F3F725C848F4005BC288 /* QuestionView.swift in Sources */,
+				C6D6F3E525C845E4005BC288 /* QuestionnaireApp.swift in Sources */,
+				C6D6F3FF25C84B98005BC288 /* QuestionnaireManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C6D6F3EE25C845E7005BC288 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C6D6F3EF25C845E7005BC288 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6D6F3F125C845E7005BC288 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Questionnaire/Preview Content\"";
+				DEVELOPMENT_TEAM = 7J4PMSU492;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Questionnaire/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.agavrilko.Questionnaire;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C6D6F3F225C845E7005BC288 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Questionnaire/Preview Content\"";
+				DEVELOPMENT_TEAM = 7J4PMSU492;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Questionnaire/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.agavrilko.Questionnaire;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C6D6F3DC25C845E4005BC288 /* Build configuration list for PBXProject "Questionnaire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6D6F3EE25C845E7005BC288 /* Debug */,
+				C6D6F3EF25C845E7005BC288 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6D6F3F025C845E7005BC288 /* Build configuration list for PBXNativeTarget "Questionnaire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6D6F3F125C845E7005BC288 /* Debug */,
+				C6D6F3F225C845E7005BC288 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C6D6F3D925C845E4005BC288 /* Project object */;
+}
