@@ -28,7 +28,8 @@ struct QuestionView: View {
                     }
                 }
             }
-        }.navigationBarBackButtonHidden(true)
+        }.accessibility(identifier: "question_view")
+        .navigationBarBackButtonHidden(true)
         .backgroundNavigation(
             manager: self.manager,
             context: $navigationContext

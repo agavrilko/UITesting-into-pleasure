@@ -13,6 +13,7 @@ struct Question: Identifiable {
 
         let id: String
         let text: String
+        let isRight: Bool
 
     }
 

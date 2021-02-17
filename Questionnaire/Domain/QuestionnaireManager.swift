@@ -33,28 +33,24 @@ final class QuestionnaireManager {
     }
 
     private let questions: [Question]
-    private let answers: [String: String]
     private var progress: Progress?
 
-    init(questions: [Question], answers: [String: String]) {
+    init(questions: [Question]) {
         self.questions = questions
-        self.answers = answers
     }
 
     func currentQuestion() -> Question? {
-        self.progress.flatMap { self.question(at: $0.current) }
+        self.progress.flatMap { self.question(index: $0.current) }
     }
 
     func nextQuestion() -> Question? {
-        self.progress.flatMap { self.question(at: $0.current + 1) }
+        self.progress.flatMap { self.question(index: $0.current + 1) }
     }
 
     func results() -> Results? {
         self.progress.flatMap { progress in
             self.questions.count == progress.current ? self.results(
-                rightAnswers: self.answers.reduce(0) {
-                    progress.answers[$1.key] == $1.value ? $0 + 1 : $0
-                }
+                rightAnswers: self.rightAnswers(progress.answers)
             ) : nil
         }
     }
@@ -80,8 +76,24 @@ final class QuestionnaireManager {
 
     // MARK: Private
 
-    private func question(at index: Int) -> Question? {
+    private func question(index: Int) -> Question? {
         index < self.questions.count ? self.questions[index] : nil
+    }
+
+    private func question(id: String) -> Question? {
+        self.questions.first { $0.id == id }
+    }
+
+    private func rightAnswers(_ answers: [String: String]) -> Int {
+        var result = 0
+        for (questionId, answerId) in answers {
+            if let question = self.question(id: questionId) {
+                if question.answers.first(where: { $0.id == answerId })?.isRight == true {
+                    result += 1
+                }
+            }
+        }
+        return result
     }
 
     private func results(rightAnswers: Int) -> Results? {
