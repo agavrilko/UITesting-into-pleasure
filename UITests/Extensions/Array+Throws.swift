@@ -9,8 +9,10 @@ import XCTest
 
 extension Array where Element == XCUIElement {
 
-    func throwIfDoesNotExist() throws {
-        try self.forEach { try $0.throwIfDoesNotExist() }
+    func throwIfDoesNotExist(timeout: TimeInterval = 1.0) throws {
+        for i in 0..<self.count {
+            try self[i].throwIfDoesNotExist(timeout: i == 0 ? timeout : 0.0)
+        }
     }
 
 }

@@ -49,8 +49,7 @@ struct WelcomeView: View {
                 manager: self.manager,
                 context: self.$context
             )
-        }.accessibility(identifier: "welcome_view")
-        .navigationViewStyle(StackNavigationViewStyle())
+        }.navigationViewStyle(StackNavigationViewStyle())
         .environmentObject(NavigationCoordinator(rootContext: self.$context))
     }
 
