@@ -50,4 +50,4 @@ class WelcomePageObject: PageObject {
 }
 ```
 
-An article about this can be found on [LinkedIn](https://www.linkedin.com).
+An article about this can be found on [LinkedIn](https://www.linkedin.com/pulse/turning-ui-testing-pleasure-alexander-gavrilko).
