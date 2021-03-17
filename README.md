@@ -1,6 +1,8 @@
-# Quiz app
-A simple application to demonstrate the Page Object Model approach in UI testing.
+A sample project about UI testing using "Page Object Model" technique.
+An article can be found on [LinkedIn](https://www.linkedin.com/pulse/turning-ui-testing-pleasure-alexander-gavrilko).
+![Build Status](https://github.com/agavrilko/UITesting-into-pleasure/workflows/main.yml/badge.svg)
 
+# Overview
 The main idea is to incapsulate screen logic into an object called PageObject. 
 To be used with XCTest framework it was implemented as follows:
 ```Swift
@@ -49,5 +51,3 @@ class WelcomePageObject: PageObject {
     
 }
 ```
-
-An article about this can be found on [LinkedIn](https://www.linkedin.com/pulse/turning-ui-testing-pleasure-alexander-gavrilko).
