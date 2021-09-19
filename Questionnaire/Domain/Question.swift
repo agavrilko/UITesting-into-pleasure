@@ -7,9 +7,11 @@
 
 import Foundation
 
-struct Question: Identifiable {
+typealias Questions = [Question]
 
-    struct Answer: Identifiable {
+struct Question: Codable, Identifiable {
+
+    struct Answer: Codable, Identifiable {
 
         let id: String
         let text: String

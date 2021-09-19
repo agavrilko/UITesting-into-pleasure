@@ -6,6 +6,13 @@
 //
 
 import Foundation
+import Combine
+
+protocol QuestionsProvider {
+
+    func questions() -> AnyPublisher<Questions, Error>
+
+}
 
 final class QuestionnaireManager {
 
@@ -32,11 +39,18 @@ final class QuestionnaireManager {
 
     }
 
-    private let questions: [Question]
-    private var progress: Progress?
+    private enum State {
+        case blank(QuestionsProvider)
+        case retrieving(QuestionsProvider, AnyCancellable)
+        case failed(QuestionsProvider, Error)
+        case inProgress(Questions, Progress)
+        case done(Questions, Results)
+    }
 
-    init(questions: [Question]) {
-        self.questions = questions
+    private var state: State
+
+    init(provider: QuestionsProvider) {
+        self.state = .blank(provider)
     }
 
     func currentQuestion() -> Question? {
@@ -55,9 +69,17 @@ final class QuestionnaireManager {
         }
     }
 
-    func start() {
+    func start() -> AnyPublisher<Question, Error> {
         NSLog("\(type(of: self)): start")
-        self.progress = Progress()
+        switch self.state {
+
+        case let .blank(provider):
+            provider.questions()
+                .sink {
+                    
+                }
+
+        }
     }
 
     func choose(answer: Question.Answer) throws {

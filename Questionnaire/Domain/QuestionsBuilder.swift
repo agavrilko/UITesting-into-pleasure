@@ -1,19 +1,20 @@
 //
-//  QuestionnaireBuilder.swift
+//  QuestionsBuilder.swift
 //  Questionnaire
 //
 //  Created by Oleksandr Havrylko on 2/15/21.
 //
 
 import Foundation
+import Combine
 
-class QuestionnaireBuilder {
+final class QuestionsBuilder {
 
     private let idGen: IdGenerator
     private var questionFactories: [QuestionFactory]
 
     init() {
-        self.idGen = IdGenerator(counter: 1)
+        self.idGen = IdGenerator(prefix: "ID")
         self.questionFactories = []
     }
 
@@ -42,17 +43,26 @@ class QuestionnaireBuilder {
         return self
     }
 
-    func build() -> QuestionnaireManager {
-        QuestionnaireManager(
-            questions: self.questionFactories.map { $0.question() }
-        )
+    func questions() -> Questions {
+        self.questionFactories.map { $0.question() }
     }
 
 }
 
-private class QuestionFactory {
+extension QuestionsBuilder: QuestionsProvider {
 
-    private class AnswerFactory {
+    // MARK: QuestionsProvider
+
+    func questions() -> AnyPublisher<Questions, Error> {
+        Future { $0(.success(self.questions())) }
+            .eraseToAnyPublisher()
+    }
+
+}
+
+private final class QuestionFactory {
+
+    private final class AnswerFactory {
 
         let idGen: IdGenerator
         let text: String
@@ -108,18 +118,22 @@ private class QuestionFactory {
 
 }
 
-private class IdGenerator {
+private final class IdGenerator {
 
-    private var counter: Int
+    private let format: String
+    private var seed: UInt32
 
-    init(counter: Int) {
-        self.counter = counter
+    convenience init(prefix: String) {
+        self.init(format: "\(prefix).%\(PRIuFAST32)")
+    }
+
+    init(format: String) {
+        self.format = format
+        self.seed = .max
     }
 
     func next() -> String {
-        let result = "\(self.counter)"
-        self.counter += 1
-        return result
+        String(format: self.format, self.seed.next())
     }
 
 }
@@ -128,6 +142,24 @@ private extension QuestionFactory {
 
     func containsRightAnswer() -> Bool {
         self.answerFactories.first { $0.isRight } != nil
+    }
+
+}
+
+private extension UInt32 {
+
+    mutating func next() -> UInt32 {
+        switch self {
+
+        case .min:
+            self = .max
+            return .min
+
+        default:
+            defer { self -= 1 }
+            return self
+
+        }
     }
 
 }
